@@ -18,16 +18,13 @@ DeadCrewMember::DeadCrewMember(CrewMember crew_member, int place, int time) {
     this->role = crew_member.get_designation();
     this->age = crew_member.get_age();
     this->is_officer = crew_member.is_officer;
-    // this->captain_score = crew_member.captain_score();
-    // this->pilot_score = crew_member.pilot_score();
-    // this->engineer_score = crew_member.engineer_score();
-    // this->mining_score = crew_member.mining_score();
-    // this->weapon_score = crew_member.weapon_score();
+
     this->place_of_death = place_of_death;
     this->time_of_death = time_of_death;
-
-    cout << this->name << " dead!" << endl;
-    cout << " Designation : " << this->role << endl;
-    cout << this->age << " years old!" << endl;
 }
 
+void DeadCrewMember::getInfo() {
+    output_file << "                Name : " << this->name << endl;
+    output_file << "                Age : " << this->age << endl;
+    output_file << "                Role : " << this->role << endl;
+}

@@ -2,9 +2,13 @@
 #include "../../headers/classes/planet.h"
 
 Planet::Planet() {
-    this->name = "Asgard";
+    this->name = planet_names[rand() % planet_names.size()];
     this->resources = new Resource(2);
     this->civilization = new Species();
+}
+
+string Planet::get_name() {
+    return this->name;
 }
 
 int Planet::diplomacy() {
@@ -46,6 +50,12 @@ void Planet::mining(SpaceShip *spaceship) {
     } else {
         scrap = (scrap_needed * mining_ability) / 100;
     }
+
+    output_file << "            Resources mined : " << endl;
+    output_file << "                Food collected : " << food << endl;
+    output_file << "                Fuel mined : " << fuel << endl;
+    output_file << "                Gold mined : " << gold << endl;
+    output_file << "                Scrap Metal mined : " << scrap << endl;
 
     Resource *mined = new Resource(food, fuel, gold, scrap);
     spaceship->resources = spaceship->resources->operator+(mined);

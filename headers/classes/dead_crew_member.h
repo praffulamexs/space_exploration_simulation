@@ -12,6 +12,7 @@ class DeadCrewMember: public CrewMember {
         DeadCrewMember(int, int);
         void set_death(int, int);
         DeadCrewMember(CrewMember, int, int);
+        void getInfo();
 };
 
 #endif

@@ -25,6 +25,7 @@ class CrewMember {
         int weapon_score();
 
         CrewMember();
+        CrewMember(int, int);
         void getInfo();
         void change_officer_status(string);
 

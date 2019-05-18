@@ -3,12 +3,12 @@
 #include "../../headers/classes/crew_member.h"
 
 SpaceShip::SpaceShip(bool active) {
-    this->name = "Agni";
+    this->name = spaceship_names[rand() % spaceship_names.size()];
 
     /*  Cargo Distribution  */
     this->fuel_capacity = rand() % 500 + 3500;
     this->food_capacity = rand() % 500 + 3200;
-    this->crew_capacity = rand() % 25 + 25;
+    this->crew_capacity = rand() % 50 + 25;
     this->scrap_capacity = rand() % 1000 + 1500;
     this->gold_capacity = rand() % 1000 + 3000;
     this->resources = new Resource(0);
@@ -33,16 +33,45 @@ SpaceShip::SpaceShip(bool active) {
             this->crew.push_back(crew_member);
         }
     }
-
-    // this->defence = rand() % 40 + 60;
-    // this->offence = rand() % 40 + 60;
-    // this->mining = this->mining_ability();
-    // this->travel_efficiency = rand() % 40 + 60;
     this->speed = rand() % 40 + 60;
     this->spaceship_health = rand() % 30 + 70;
-
-    // this->getInfo(); // delete later
 }
+
+SpaceShip::SpaceShip(bool active, int species_diplomacy, int species_trading) {
+    this->name = spaceship_names[rand() % spaceship_names.size()];
+
+    /*  Cargo Distribution  */
+    this->fuel_capacity = rand() % 500 + 3000;
+    this->food_capacity = rand() % 500 + 2800;
+    this->crew_capacity = rand() % 50 + 25;
+    this->scrap_capacity = rand() % 1000 + 1500;
+    this->gold_capacity = rand() % 1000 + 3000;
+    this->resources = new Resource(0);
+
+    if(active) {
+        int crew_number = rand() % 20 + (this->crew_capacity - 20);
+        // crew_number = 5; //delete later
+        for(int i = 0; i < crew_number; i++) {
+            CrewMember crew_member(species_diplomacy, species_trading);
+            // cout << endl; // delete later
+            // crew_member.getInfo(); //delete later
+            this->crew.push_back(crew_member);
+        }
+        this->find_officers();
+    } else {
+        int crew_number = rand() % 20 + 5;
+        // crew_number = 5; //delete later
+        for(int i = 0; i < crew_number; i++) {
+            CrewMember crew_member;
+            // cout << endl; // delete later
+            // crew_member.getInfo(); //delete later
+            this->crew.push_back(crew_member);
+        }
+    }
+    this->speed = rand() % 40 + 60;
+    this->spaceship_health = rand() % 30 + 70;
+}
+
 
 void SpaceShip::find_officers() {
     this->find_captain();
@@ -80,24 +109,32 @@ string SpaceShip::getName() {
 
 
 void SpaceShip::getInfo() {
-    cout << "Name of the Spaceship : " << this->name << endl;
-    cout << "Fuel Capacity : " << this->fuel_capacity << endl;
-    cout << "Food Capacity : " << this->food_capacity << endl;
-    cout << "Crew Capacity : " << this->crew_capacity << endl;
-    cout << "Defensive Performance : " << this->defensive_performance() << endl;
-    cout << "Offensive Performance : " << this->offensive_performance() << endl;
-    cout << "Mining Potential : " << this->mining_ability() << endl;
-    cout << "Travel Effeciency : " << this->travel_efficiency() << endl;
-    cout << "Spaceship Speed : " << this->speed << endl;
-    cout << "Spaceship Health : " << this->spaceship_health << endl;
+    //  output_file << "    Spaceship : " << i + 1 << " : " << endl;
+    output_file << "    Spaceship : " << this->name << endl;
+    output_file << "    Fuel Capacity : " << this->fuel_capacity << endl;
+    output_file << "    Food Capacity : " << this->food_capacity << endl;
+    output_file << "    Crew Capacity : " << this->crew_capacity << endl;
+    output_file << "    Defensive Performance : " << this->defensive_performance() << endl;
+    output_file << "    Offensive Performance : " << this->offensive_performance() << endl;
+    output_file << "    Mining Potential : " << this->mining_ability() << endl;
+    output_file << "    Travel Effeciency : " << this->travel_efficiency() << endl;
+    output_file << "    Spaceship Speed : " << this->speed << endl;
+    output_file << "    Spaceship Health : " << this->spaceship_health << endl;
 }
 
 void SpaceShip::operator+(SpaceShip *spaceship) {
+    output_file << "            Crew Members added : " << spaceship->crew.size() << endl;
     for(int i=0; i<spaceship->crew.size(); i++) {
         if(this->crew.size() < this->crew_capacity) {
             this->crew.push_back(spaceship->crew[i]);
         }
     }
+    output_file << "            Resources added : " << endl;
+    output_file << "                Food : " << spaceship->resources->get_food() << endl;
+    output_file << "                Fuel : " << spaceship->resources->get_fuel() << endl;
+    output_file << "                Gold : " << spaceship->resources->get_gold() << endl;
+    output_file << "                Metal : " << spaceship->resources->get_scrap_metal() << endl;
+
     this->resources = this->resources->operator+(spaceship->resources);
     
     int extra_food = 0;
@@ -120,6 +157,12 @@ void SpaceShip::operator+(SpaceShip *spaceship) {
     if(this->resources->get_food() > this->food_capacity) {
         extra_scrap = this->resources->get_scrap_metal() - this->scrap_capacity;
     }
+
+    output_file << "            Extra Resources removed : " << endl;
+    output_file << "                Food : " << extra_food << endl;
+    output_file << "                Fuel : " << extra_fuel << endl;
+    output_file << "                Gold : " << extra_gold << endl;
+    output_file << "                Metal : " << extra_scrap << endl;
 
     Resource *res = new Resource(extra_food, extra_fuel, extra_gold, extra_scrap);
     this->resources = this->resources->operator-(res);
@@ -158,21 +201,24 @@ void SpaceShip::fuel_consume(int amount) {
 // }
 
 bool SpaceShip::travel(int distance) {
+
+    output_file << "    Travel : " << endl;
+
     // FOOD CONSUMPTION
-    int food_consumed = (this->crew.size() + 5)*distance/20;
+    int food_consumed = (this->crew.size() + 5)*distance/10;
     int food_available = this->resources->get_food();
     if(food_available < food_consumed) {
-        cout << "---LOW ON FOOD---" << endl;
+        output_file << "---LOW ON FOOD---" << endl;
         return true;
     }
 
     // FUEL CONSUMPTION
-    int fuel_consumed = distance*5;
+    int fuel_consumed = distance*10;
     fuel_consumed = (fuel_consumed * travel_efficiency()) / 100;
     int fuel_available = this->resources->get_fuel();
     if(fuel_available < fuel_consumed) {
         // Journey over if no fuel
-        cout << "---LOW ON FUEL---" << endl;
+        output_file << "---LOW ON FUEL---" << endl;
         return true;
     }
 
@@ -192,10 +238,10 @@ bool SpaceShip::travel(int distance) {
     health_recoverable = metal_required/100;
     this->spaceship_health = this->spaceship_health + health_recoverable;
 
-    cout << "   Food Consumed : " << food_consumed << endl;
-    cout << "   Fuel Consumed : " << fuel_consumed << endl;
-    cout << "   Ship Health : " << this->spaceship_health << endl;
-    cout << "   Material Consumed : " << metal_required << endl;
+    output_file << "        Food Consumed : " << food_consumed << endl;
+    output_file << "        Fuel Consumed : " << fuel_consumed << endl;
+    output_file << "        Ship Health : " << this->spaceship_health << endl;
+    output_file << "        Material Consumed : " << metal_required << endl;
 
     Resource *res = new Resource(food_consumed, fuel_consumed, 0, metal_required);
     this->resources = this->resources->operator-(res);
@@ -214,35 +260,26 @@ void SpaceShip::combat(SpaceShip *spaceship) {
     int *other_health = spaceship_health2;
 
     while(fighting) {
-        // cout << "Inside while loop ... " << endl;
         int original_health = current_spaceship->spaceship_health;
-        original_health = (original_health * 70) / 15;
-        cout << "Current Health : " << *current_health << endl;
-        // cout << "Current Health : " << original_health << endl;
+        original_health = (original_health * 70) / 100;
 
-        // cout << "Current Health TYPE : " << typeid(current_health).name() << endl;
-        // cout << "ss1 Health : " << spaceship_health1 << endl;
-        // cout << "ss2 Health : " << spaceship_health2 << endl;
-        // fighting = false;
-        
-        if(*current_health < original_health) {
+        if(*current_health < original_health || current_spaceship->crew.size() < 10) {
             //try to run if health below 30%
-            if((rand() % 100 + 1) <= current_spaceship->conflict_evasaion()){
-                cout << "Ran Away!" << endl;
+            int evasion = current_spaceship->conflict_evasaion();
+            if((rand() % 100 + 1) <= evasion){
+                output_file << "                " << current_spaceship->getName() << " ran away!" << endl;
                 fighting = false;
                 break;
             }
         } else {
+            output_file << "                " << current_spaceship->getName() << " launched a missile!" << endl;
             if((rand() % 100 + 1) <= other_spaceship->combat_maneuvers() && other_spaceship->resources->get_fuel() > 55) {
                 // damage evaded
                 other_spaceship->fuel_consume(rand()%5 + 1); // Fuel gets consumed to dodge attack
-                cout << "Evaded!" << endl;
+                output_file << "                " << other_spaceship->getName() << " evaded the attack!" << endl;
             } else {
-                cout << "Fighting!" << endl;
-                int damage = current_spaceship->offensive_performance() - (current_spaceship->offensive_performance()*other_spaceship->defensive_performance())/50;
-                // if(damage > 10) {
-                //     damage = 10;
-                // }
+                int damage = current_spaceship->offensive_performance() - (current_spaceship->offensive_performance()*other_spaceship->defensive_performance())/100;
+                output_file << "                " << current_spaceship->getName() << " dealt " << damage << " damage to " << other_spaceship->getName() << endl;
                 *other_health = *other_health - damage;
                 other_spaceship->damage_dealt(damage);
             }
@@ -278,28 +315,57 @@ void SpaceShip::damage_dealt(int damage) {
         int officer_dead = rand() % 5;
         if(officer_dead == 0) {
             DeadCrewMember dead_officer(this->captain, 0, 0);
+            output_file << "                    Captain Dead!" << endl;
+            output_file << "                        Time Of Death : " << "asdasd" << endl;
+            output_file << "                        Place of Death : Sector " << current_sector << endl;
             this->dead_crew.push_back(dead_officer);
             this->find_captain();
+            output_file << "                    New Captain Chosen!" << endl;
+            this->captain.getInfo();
         } else if(officer_dead == 1) {
             DeadCrewMember dead_officer(this->pilot, 0, 0);
+            output_file << "                    Pilot Dead!" << endl;
+            output_file << "                        Time Of Death : " << "asdasd" << endl;
+            output_file << "                        Place of Death : Sector " << current_sector << endl;
             this->dead_crew.push_back(dead_officer);
             this->find_pilot();
+            output_file << "                    New Pilot Chosen!" << endl;
+            this->pilot.getInfo();
         } else if(officer_dead == 2) {
             DeadCrewMember dead_officer(this->engineer, 0, 0);
+            output_file << "                    Engineer Dead!" << endl;
+            output_file << "                        Time Of Death : " << "asdasd" << endl;
+            output_file << "                        Place of Death : Sector " << current_sector << endl;
             this->dead_crew.push_back(dead_officer);
             this->find_engineer();
+            output_file << "                    New Engineer Chosen!" << endl;
+            this->engineer.getInfo();
         } else if(officer_dead == 3) {
             DeadCrewMember dead_officer(this->mining_officer, 0, 0);
+            output_file << "                    Mining Officer Dead!" << endl;
+            output_file << "                        Time Of Death : " << "asdasd" << endl;
+            output_file << "                        Place of Death : Sector " << current_sector << endl;
             this->dead_crew.push_back(dead_officer);
             this->find_mining_officer();
+            output_file << "                    New Mining Officer Chosen!" << endl;
+            this->mining_officer.getInfo();
         } else if(officer_dead == 4) {
             DeadCrewMember dead_officer(this->weapon_officer, 0, 0);
+            output_file << "                    Weapon Officer Dead!" << endl;
+            output_file << "                        Time Of Death : " << "asdasd" << endl;
+            output_file << "                        Place of Death : Sector " << current_sector << endl;
             this->dead_crew.push_back(dead_officer);
             this->find_weapon_officer();
+            output_file << "                    New Weapon Officer Chosen!" << endl;
+            this->weapon_officer.getInfo();
         }
-        // damage = damage - 1; // Keeping maximum number of deaths per kill to be 9
+        damage = 7; // Keeping maximum number of deaths per kill to be 9
     }
-    int number_of_dead = rand() % damage ;
+    int number_of_dead = rand() % damage + 1;
+    if(number_of_dead > this->crew.size()) {
+        number_of_dead = this->crew.size();
+    }
+    output_file << "                    " << number_of_dead <<" crew members dead!" << endl;
     for(int i=0; i<number_of_dead; i++) {
         int dead = rand() % this->crew.size();
         DeadCrewMember dead_member(this->crew[dead], 0, 0);
@@ -340,20 +406,17 @@ void SpaceShip::do_trading(SpaceShip *spaceship, int multiplier) {
                 if(cost > this->resources->get_gold()) {
                     cost = this->resources->get_gold();
                 }
-                // cout << "GOLD REMAINING : " << this->resources->get_gold() << endl;
                 available_to_give = (cost * 4) / multiplier;
                 Resource *res = new Resource(available_to_give, 0, -cost, 0);
                 this->resources = this->resources->operator+(res);
                 spaceship->resources = spaceship->resources->operator-(res);
                 delete res;
-                // cout << "GOLD REMAINING : " << this->resources->get_gold() << endl;
-                cout << "Took food" << endl;
+                output_file << "                Took " << available_to_give << " food for " << cost << " gold." << endl;
             }
         } else {
             if(spaceship->resources->get_food() < (spaceship->food_capacity - 500)) {
                 // Traveler has excess of food resource
                 int available_to_give = (this->resources->get_food()) - (this->food_capacity - 500);
-                // cout << "available_to_give : " << available_to_give << endl;
                 int needed = spaceship->food_capacity - spaceship->resources->get_food();
                 if(needed < available_to_give) {
                     available_to_give = needed;
@@ -363,15 +426,12 @@ void SpaceShip::do_trading(SpaceShip *spaceship, int multiplier) {
                 if(cost > spaceship->resources->get_gold()) {
                     cost = spaceship->resources->get_gold();
                 }
-                // cout << "GOLD REMAINING : " << this->resources->get_gold() << endl;
                 available_to_give = (cost * 4)/multiplier;
-                // cout << "available_to_give : " << available_to_give << endl;
                 Resource *res = new Resource(available_to_give, 0, -cost, 0);
                 spaceship->resources = spaceship->resources->operator+(res);
                 this->resources = this->resources->operator-(res);
                 delete res;
-                // cout << "GOLD REMAINING : " << this->resources->get_gold() << endl;
-                cout << "Gave food" << endl;
+                output_file << "                Gave " << available_to_give << " food for " << cost << " gold." << endl;
             }
         }
     }
@@ -390,39 +450,31 @@ void SpaceShip::do_trading(SpaceShip *spaceship, int multiplier) {
             if(cost > this->resources->get_gold()) {
                 cost = this->resources->get_gold();
             }
-            // cout << "GOLD REMAINING : " << this->resources->get_gold() << endl;
             available_to_give = (cost * 4)/multiplier;
             Resource *res = new Resource(0, available_to_give, -cost, 0);
             this->resources = this->resources->operator+(res);
             spaceship->resources = spaceship->resources->operator-(res);
             delete res;
-            // cout << "GOLD REMAINING : " << this->resources->get_gold() << endl;
-            cout << "Took fuel" << endl;
+            output_file << "                Took " << available_to_give << " fuel for " << cost << " gold." << endl;
         }
     } else {
-        // cout << "2....." << endl;
         if(this->resources->get_fuel() > (this->fuel_capacity - 500)) {
             // Traveler has excess of fuel resource
             int available_to_give = (this->resources->get_fuel()) - (this->fuel_capacity - 500);
-            // cout << "available_to_give : " << available_to_give << endl;
             int needed = spaceship->fuel_capacity - spaceship->resources->get_fuel();
             if(needed < available_to_give) {
                 available_to_give = needed;
             }
-            // cout << "available_to_give : " << available_to_give << endl;
             int cost = (available_to_give * multiplier)/4;
             if(cost > spaceship->resources->get_gold()) {
                 cost = spaceship->resources->get_gold();
             }
-            // cout << "GOLD REMAINING : " << this->resources->get_gold() << endl;
             available_to_give = (cost * 4) / multiplier;
-            // cout << "available_to_give : " << available_to_give << endl;
             Resource *res = new Resource(0, available_to_give, -cost, 0);
             spaceship->resources = spaceship->resources->operator+(res);
             this->resources = this->resources->operator-(res);
             delete res;
-            // cout << "GOLD REMAINING : " << this->resources->get_gold() << endl;
-            cout << "Gave fuel" << endl;
+            output_file << "                Gave " << available_to_give << " fuel for " << cost << " gold." << endl;
         }
     }
 
@@ -440,49 +492,35 @@ void SpaceShip::do_trading(SpaceShip *spaceship, int multiplier) {
             if(cost > this->resources->get_gold()) {
                 cost = this->resources->get_gold();
             }
-            cout << "GOLD REMAINING : " << this->resources->get_gold() << endl;
             available_to_give = (cost * 4) / multiplier;
             Resource *res = new Resource(0, 0, -cost, available_to_give);
             this->resources = this->resources->operator+(res);
             spaceship->resources = spaceship->resources->operator-(res);
             delete res;
-            cout << "GOLD REMAINING : " << this->resources->get_gold() << endl;
-            cout << "Took metal" << endl;
+            output_file << "                Took " << available_to_give << " metal for " << cost << " gold." << endl;
         }
     } else {
         if(this->resources->get_scrap_metal() > (this->scrap_capacity - 500)) {
             // Traveler has excess of metal resource
             int available_to_give = (this->resources->get_scrap_metal()) - (this->scrap_capacity - 500);
-            // cout << "available_to_give : " << available_to_give << endl;
             int needed = spaceship->scrap_capacity - spaceship->resources->get_scrap_metal();
             if(needed < available_to_give) {
                 available_to_give = needed;
             }
-            // cout << "available_to_give : " << available_to_give << endl;
             int cost = (available_to_give * multiplier)/4;
             if(cost > spaceship->resources->get_gold()) {
                 cost = spaceship->resources->get_gold();
             }
-            // cout << "GOLD REMAINING : " << this->resources->get_gold() << endl;
             available_to_give = (cost * 4) / multiplier;
-            // cout << "available_to_give : " << available_to_give << endl;
             Resource *res = new Resource(0, 0, -cost, available_to_give);
             spaceship->resources = spaceship->resources->operator+(res);
             this->resources = this->resources->operator-(res);
             delete res;
-            // cout << "GOLD REMAINING : " << this->resources->get_gold() << endl;
-            cout << "Gave metal" << endl;
+            output_file << "                Gave " << available_to_give << " metal for " << cost << " gold." << endl;
         }
     }
 }
 
-/*   FINDING OFFICERS   */
-/*   FINDING OFFICERS   */
-/*   FINDING OFFICERS   */
-/*   FINDING OFFICERS   */
-/*   FINDING OFFICERS   */
-/*   FINDING OFFICERS   */
-/*   FINDING OFFICERS   */
 /*   FINDING OFFICERS   */
 
 void SpaceShip::find_captain() {
@@ -658,6 +696,8 @@ int SpaceShip::total_crew() {
 }
 
 bool SpaceShip::check_if_alive() {
+    output_file << "    Spaceship Health : " << this->spaceship_health << endl;
+    output_file << "    Crew Members Left : " << this->crew.size() << endl;
     if(this->spaceship_health <= 0) {
         return true;
     } else if(this->crew.size() == 0) {
@@ -665,5 +705,41 @@ bool SpaceShip::check_if_alive() {
     } else {
         return false;
     }
+}
+
+void SpaceShip::get_captain_info() {
+    this->captain.getInfo();
+}
+
+void SpaceShip::get_pilot_info() {
+    this->pilot.getInfo();
+}
+
+void SpaceShip::get_engineer_info() {
+    this->engineer.getInfo();
+}
+
+void SpaceShip::get_mining_officer_info() {
+    this->mining_officer.getInfo();
+}
+
+void SpaceShip::get_weapon_officer_info() {
+    this->weapon_officer.getInfo();
+}
+
+void SpaceShip::get_crew_info() {
+    for(int i=0;i<this->crew.size(); i++) {
+        this->crew[i].getInfo();
+    }
+}
+
+void SpaceShip::get_dead_crew_info() {
+    for(int i=0;i<this->dead_crew.size(); i++) {
+        this->dead_crew[i].getInfo();
+    }
+}
+
+int SpaceShip::get_speed() {
+    return this->speed;
 }
 

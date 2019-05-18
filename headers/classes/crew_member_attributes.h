@@ -16,6 +16,7 @@ class CrewMemberAttributes: public SpeciesAttributes {
 
     public:
         CrewMemberAttributes();
+        CrewMemberAttributes(int, int);
 
         void getInfo();
         // operator+();

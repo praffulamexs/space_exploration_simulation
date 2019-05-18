@@ -4,8 +4,8 @@
 Resource::Resource(int val) {
     if(val ==0){
         /* SPACESHIP */
-        this->food = rand() % 1000 + 2500;
-        this->fuel = rand() % 1000 + 3000;
+        this->food = rand() % 2000 + 2300;
+        this->fuel = rand() % 1000 + 3500;
         this->gold = rand() % 1000 + 2500;
         this->scrap_metal = rand() % 200 + 400;
     } else if(val == 1) {
@@ -63,3 +63,9 @@ Resource* Resource::operator-(Resource *a) {
     return this;
 }
 
+void Resource::getInfo() {
+    output_file << "        Food : " << this->food << endl;
+    output_file << "        Fuel : " << this->fuel << endl;
+    output_file << "        Gold : " << this->gold << endl;
+    output_file << "        Scrap Metal : " << this->scrap_metal << endl;
+}

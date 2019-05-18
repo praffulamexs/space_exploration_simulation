@@ -15,6 +15,7 @@ class Species {
 
     public:
         Species();
+        string get_species_name();
         int diplomacy();
         void trade(SpaceShip*);
         SpaceShip* get_spaceship();

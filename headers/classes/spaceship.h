@@ -4,6 +4,7 @@
 #include "./resource.h"
 #include "./crew_member.h"
 #include "./dead_crew_member.h"
+// #include  "./species.h"
 
 class SpaceShip {
     private:
@@ -32,6 +33,7 @@ class SpaceShip {
 
     public:
         SpaceShip(bool);
+        SpaceShip(bool, int, int);
 
         int total_crew();
         Resource *resources;
@@ -59,6 +61,17 @@ class SpaceShip {
         void find_engineer();
         void find_mining_officer();
         void find_weapon_officer();
+
+        void get_captain_info();
+        void get_pilot_info();
+        void get_engineer_info();
+        void get_mining_officer_info();
+        void get_weapon_officer_info();
+
+        void get_crew_info();
+        void get_dead_crew_info();
+
+        int get_speed();
 
         int diplomacy();
         int trading();

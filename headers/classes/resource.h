@@ -17,6 +17,8 @@ class Resource {
         int get_gold();
         int get_scrap_metal();
 
+        void getInfo();
+
         Resource* operator+(Resource*);
         Resource* operator-(Resource*);
 };

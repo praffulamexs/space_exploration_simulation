@@ -1,12 +1,23 @@
 #include "../../headers/all_imports.h"
 #include "../../headers/classes/crew_member.h"
 
+// vector<string> crew_first_names;
+// vector<string> crew_last_names;
+
 CrewMember::CrewMember() {
-    this->name = "Mogambo";
+    this->name = crew_first_names[rand() % crew_first_names.size()] + " " + crew_last_names[rand() % crew_last_names.size()];
     this->role = "Crew Member";
     this->age = rand() % 80 + 20;
     this->is_officer = false;
     this->attributes = new CrewMemberAttributes();
+}
+
+CrewMember::CrewMember(int species_diplomacy, int species_trading) {
+    this->name = crew_first_names[rand() % crew_first_names.size()] + " " + crew_last_names[rand() % crew_last_names.size()];
+    this->role = "Crew Member";
+    this->age = rand() % 80 + 20;
+    this->is_officer = false;
+    this->attributes = new CrewMemberAttributes(species_diplomacy, species_trading);
 }
 
 int CrewMember::captain_score() {
@@ -30,11 +41,9 @@ int CrewMember::weapon_score() {
 }
 
 void CrewMember::getInfo() {
-    cout << "Name : " << this->name << endl;
-    cout << "Age : " << this->age << endl;
-    cout << "Officer : " << this->is_officer << endl;
-    cout << "Attributes : " << endl;
-    this->attributes->getInfo();
+    output_file << "                Name : " << this->name << endl;
+    output_file << "                Age : " << this->age << endl;
+    // this->attributes->getInfo();
 }
 
 void CrewMember::change_officer_status(string designation) {

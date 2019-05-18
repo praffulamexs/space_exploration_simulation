@@ -14,6 +14,8 @@ class TradingStation {
         TradingStation();
         int trading_score();
         void trade(SpaceShip*);
+
+        string get_species_name();
 };
 
 #endif

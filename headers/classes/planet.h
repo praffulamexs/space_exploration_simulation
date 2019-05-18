@@ -13,6 +13,7 @@ class Planet {
 
     public:
         Planet();
+        string get_name();
         void mining(SpaceShip*);
         int diplomacy();
         void trading(SpaceShip*);

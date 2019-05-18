@@ -11,6 +11,19 @@ CrewMemberAttributes::CrewMemberAttributes() {
     this->defensive_performance = rand() % 100 + 1;
 }
 
+CrewMemberAttributes::CrewMemberAttributes(int species_diplomacy, int species_trading) {
+    this->diplomacy = rand() % species_diplomacy + 1;
+    this->trading = rand() % species_trading + 1;
+
+    this->travel_efficiency = rand() % 100 + 1;
+    this->combat_maneuvers = rand() % 100 + 1;
+    this->conflict_evasion = rand() % 100 + 1;
+    this->system_recovery = rand() % 100 + 1;
+    this->mining_ability = rand() % 100 + 1;
+    this->offensive_performance = rand() % 100 + 1;
+    this->defensive_performance = rand() % 100 + 1;
+}
+
 void CrewMemberAttributes::getInfo() {
     cout << "   travel_efficiency : " << this->travel_efficiency << endl;
     cout << "   combat_maneuvers : " << this->combat_maneuvers << endl;
@@ -30,9 +43,10 @@ void CrewMemberAttributes::getInfo() {
 }
 
 int CrewMemberAttributes::captain_score() {
-    int score = (this->diplomacy + this->trading)/2;
+    int score = (this->diplomacy + this->trading) / 2;
     return score;
 }
+
 int CrewMemberAttributes::pilot_score() {
     int score = (this->travel_efficiency + this->combat_maneuvers + this->conflict_evasion)/3;
     return score;

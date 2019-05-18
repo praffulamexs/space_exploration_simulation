@@ -2,10 +2,15 @@
 #include "../../headers/classes/species.h"
 
 Species::Species() {
-    this->name = "Asgardians";
+    this->name = species_names[rand() % species_names.size()];
     this->attributes = new SpeciesAttributes();
     this->resources = new Resource(1);
-    this->spaceship = new SpaceShip(true);
+    // this->spaceship = new SpaceShip(true);
+    this->spaceship = new SpaceShip(true, this->attributes->get_diplomacy_score(), this->attributes->get_trading_score());
+}
+
+string Species::get_species_name() {
+    return this->name;
 }
 
 int Species::diplomacy() {
@@ -38,6 +43,7 @@ void Species::do_trading(SpaceShip *another_spaceship, int multiplier) {
                 needed = (another_spaceship->resources->get_gold() * 4) / multiplier;
             }
             int cost = (needed*multiplier)/4;
+            output_file << "                Got " << needed << " food for " << cost << " gold." << endl;
             Resource *res = new Resource(needed, 0, -cost, 0);
                 another_spaceship->resources = another_spaceship->resources->operator+(res);
                 this->resources = this->resources->operator-(res);
@@ -51,7 +57,8 @@ void Species::do_trading(SpaceShip *another_spaceship, int multiplier) {
         if(another_spaceship->resources->get_gold() < (needed*multiplier)/4) {
             needed = (another_spaceship->resources->get_gold() * 4) / multiplier;
         }
-        int cost = (needed*multiplier)/4;
+        int cost = (needed * multiplier) / 4;
+        output_file << "                Got " << needed << " fuel for " << cost << " gold." << endl;
         Resource *res = new Resource(0, needed, -cost, 0);
             another_spaceship->resources = another_spaceship->resources->operator+(res);
             this->resources = this->resources->operator-(res);
@@ -66,6 +73,7 @@ void Species::do_trading(SpaceShip *another_spaceship, int multiplier) {
         }
         int cost = (needed*multiplier)/4;
         Resource *res = new Resource(0, 0, -cost, needed);
+            output_file << "                Got " << needed << " scrap metal for " << cost << " gold." << endl;
             another_spaceship->resources = another_spaceship->resources->operator+(res);
             this->resources = this->resources->operator-(res);
         delete res;
