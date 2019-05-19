@@ -17,3 +17,5 @@ void TradingStation::trade(SpaceShip *spaceship) {
 string TradingStation::get_species_name() {
     return this->species->get_species_name();
 }
+
+

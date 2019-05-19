@@ -9,10 +9,10 @@ class DeadCrewMember: public CrewMember {
         int time_of_death;
     public:
         DeadCrewMember();
-        DeadCrewMember(int, int);
-        void set_death(int, int);
-        DeadCrewMember(CrewMember, int, int);
+        DeadCrewMember(CrewMember);
+        void set_death();
         void getInfo();
+
 };
 
 #endif

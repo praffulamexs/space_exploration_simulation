@@ -21,6 +21,7 @@ extern ofstream output_file;
 extern string output_file_name;
 
 extern int current_sector;
+extern int day;
 
 #endif
 

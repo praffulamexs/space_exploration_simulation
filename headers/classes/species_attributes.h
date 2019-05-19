@@ -11,9 +11,6 @@ class SpeciesAttributes {
 
         int get_diplomacy_score();
         int get_trading_score();
-
-        // operator+();
-        // operator-();
 };
 
 #endif

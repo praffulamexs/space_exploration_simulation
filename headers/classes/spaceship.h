@@ -31,6 +31,17 @@ class SpaceShip {
         CrewMember mining_officer;
         CrewMember weapon_officer;
 
+        void find_officers();
+
+        void find_captain();
+        void find_pilot();
+        void find_engineer();
+        void find_mining_officer();
+        void find_weapon_officer();
+
+        void damage_dealt(int);
+        void fuel_consume(int);
+
     public:
         SpaceShip(bool);
         SpaceShip(bool, int, int);
@@ -49,18 +60,7 @@ class SpaceShip {
         bool travel(int);
         void combat(SpaceShip*);
 
-        void damage_dealt(int);
-        void fuel_consume(int);
-
         void trade(SpaceShip*);
-
-        void find_officers();
-
-        void find_captain();
-        void find_pilot();
-        void find_engineer();
-        void find_mining_officer();
-        void find_weapon_officer();
 
         void get_captain_info();
         void get_pilot_info();

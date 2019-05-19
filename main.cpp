@@ -18,6 +18,7 @@ ofstream output_file;
 string output_file_name;
 
 int current_sector;
+int day;
 
 void load_text_files();
 
@@ -34,17 +35,7 @@ int main(int inputs, char **args) {
         output_file.open(output_file_name, ios::trunc);
         output_file.close();
 
-        // cout << "Number of sec since January 1,1970:" << now << endl;
-
-        // ltm->tm_year = ltm->tm_year + 3000;
-
-        // print various components of tm structure.
-        // cout << "Year" << ltm->tm_year << endl;
-        // cout << "Month: " << 1 + ltm->tm_mon + 100 << endl;
-        // cout << "Day: " << ltm->tm_mday << endl;
-        // cout << "Time: " << 1 + ltm->tm_hour << ":";
-        // cout << 1 + ltm->tm_min << ":";
-        // cout << 1 + ltm->tm_sec << endl;
+        day = 1;
 
         output_file.open(output_file_name, ios::app);
         output_file << "Choosing a spaceship among : " << endl;
@@ -92,9 +83,13 @@ int main(int inputs, char **args) {
         output_file << "\nThe Journey Begins...\n" << endl;
 
         output_file << "========================= Sector Beginning ===========================" << endl;
+        output_file << "    DAY : " << day << endl;
 
+        cout << "Journey starting..." << endl;
         for (int i = 0; i < sector_number; i++) {
             current_sector = i+1;
+            cout << "Sector Number : " << current_sector << endl;
+
             output_file << "    Sector Number : " << i + 1 << endl;
             Sector *sector = new Sector(species[random].get_spaceship());
             if(sector->journey_ended()) {
@@ -109,8 +104,9 @@ int main(int inputs, char **args) {
             output_file << "======================== Sector End ===========================" << endl;
             output_file << endl;
         }
+        cout << "Journey Finished." << endl;
 
-        output_file << "JOURNEY ENDED.\n" << endl;
+        output_file << "JOURNEY FINISHED.\n" << endl;
         
         output_file << "Spaceship status :" << endl;
         species[random].get_spaceship()->getInfo();

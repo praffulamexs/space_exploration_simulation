@@ -6,8 +6,8 @@ SpaceShip::SpaceShip(bool active) {
     this->name = spaceship_names[rand() % spaceship_names.size()];
 
     /*  Cargo Distribution  */
-    this->fuel_capacity = rand() % 500 + 3500;
-    this->food_capacity = rand() % 500 + 3200;
+    this->fuel_capacity = rand() % 1500 + 7000;
+    this->food_capacity = rand() % 1500 + 5000;
     this->crew_capacity = rand() % 50 + 25;
     this->scrap_capacity = rand() % 1000 + 1500;
     this->gold_capacity = rand() % 1000 + 3000;
@@ -41,11 +41,11 @@ SpaceShip::SpaceShip(bool active, int species_diplomacy, int species_trading) {
     this->name = spaceship_names[rand() % spaceship_names.size()];
 
     /*  Cargo Distribution  */
-    this->fuel_capacity = rand() % 500 + 3000;
-    this->food_capacity = rand() % 500 + 2800;
+    this->fuel_capacity = rand() % 1500 + 7000;
+    this->food_capacity = rand() % 1500 + 5000;
     this->crew_capacity = rand() % 50 + 25;
     this->scrap_capacity = rand() % 1000 + 1500;
-    this->gold_capacity = rand() % 1000 + 3000;
+    this->gold_capacity = rand() % 1000 + 5000;
     this->resources = new Resource(0);
 
     if(active) {
@@ -146,15 +146,15 @@ void SpaceShip::operator+(SpaceShip *spaceship) {
         extra_food = this->resources->get_food() - this->food_capacity;
     }
     
-    if(this->resources->get_food() > this->food_capacity) {
+    if(this->resources->get_fuel() > this->food_capacity) {
         extra_fuel = this->resources->get_fuel() - this->fuel_capacity;
     }
     
-    if(this->resources->get_food() > this->food_capacity) {
+    if(this->resources->get_gold() > this->food_capacity) {
         extra_gold = this->resources->get_gold() - this->gold_capacity;
     }
     
-    if(this->resources->get_food() > this->food_capacity) {
+    if(this->resources->get_scrap_metal() > this->food_capacity) {
         extra_scrap = this->resources->get_scrap_metal() - this->scrap_capacity;
     }
 
@@ -213,7 +213,7 @@ bool SpaceShip::travel(int distance) {
     }
 
     // FUEL CONSUMPTION
-    int fuel_consumed = distance*10;
+    int fuel_consumed = distance*7;
     fuel_consumed = (fuel_consumed * travel_efficiency()) / 100;
     int fuel_available = this->resources->get_fuel();
     if(fuel_available < fuel_consumed) {
@@ -314,7 +314,7 @@ void SpaceShip::damage_dealt(int damage) {
     if(damage > 10) {
         int officer_dead = rand() % 5;
         if(officer_dead == 0) {
-            DeadCrewMember dead_officer(this->captain, 0, 0);
+            DeadCrewMember dead_officer(this->captain);
             output_file << "                    Captain Dead!" << endl;
             output_file << "                        Time Of Death : " << "asdasd" << endl;
             output_file << "                        Place of Death : Sector " << current_sector << endl;
@@ -323,7 +323,7 @@ void SpaceShip::damage_dealt(int damage) {
             output_file << "                    New Captain Chosen!" << endl;
             this->captain.getInfo();
         } else if(officer_dead == 1) {
-            DeadCrewMember dead_officer(this->pilot, 0, 0);
+            DeadCrewMember dead_officer(this->pilot);
             output_file << "                    Pilot Dead!" << endl;
             output_file << "                        Time Of Death : " << "asdasd" << endl;
             output_file << "                        Place of Death : Sector " << current_sector << endl;
@@ -332,7 +332,7 @@ void SpaceShip::damage_dealt(int damage) {
             output_file << "                    New Pilot Chosen!" << endl;
             this->pilot.getInfo();
         } else if(officer_dead == 2) {
-            DeadCrewMember dead_officer(this->engineer, 0, 0);
+            DeadCrewMember dead_officer(this->engineer);
             output_file << "                    Engineer Dead!" << endl;
             output_file << "                        Time Of Death : " << "asdasd" << endl;
             output_file << "                        Place of Death : Sector " << current_sector << endl;
@@ -341,7 +341,7 @@ void SpaceShip::damage_dealt(int damage) {
             output_file << "                    New Engineer Chosen!" << endl;
             this->engineer.getInfo();
         } else if(officer_dead == 3) {
-            DeadCrewMember dead_officer(this->mining_officer, 0, 0);
+            DeadCrewMember dead_officer(this->mining_officer);
             output_file << "                    Mining Officer Dead!" << endl;
             output_file << "                        Time Of Death : " << "asdasd" << endl;
             output_file << "                        Place of Death : Sector " << current_sector << endl;
@@ -350,7 +350,7 @@ void SpaceShip::damage_dealt(int damage) {
             output_file << "                    New Mining Officer Chosen!" << endl;
             this->mining_officer.getInfo();
         } else if(officer_dead == 4) {
-            DeadCrewMember dead_officer(this->weapon_officer, 0, 0);
+            DeadCrewMember dead_officer(this->weapon_officer);
             output_file << "                    Weapon Officer Dead!" << endl;
             output_file << "                        Time Of Death : " << "asdasd" << endl;
             output_file << "                        Place of Death : Sector " << current_sector << endl;
@@ -368,7 +368,7 @@ void SpaceShip::damage_dealt(int damage) {
     output_file << "                    " << number_of_dead <<" crew members dead!" << endl;
     for(int i=0; i<number_of_dead; i++) {
         int dead = rand() % this->crew.size();
-        DeadCrewMember dead_member(this->crew[dead], 0, 0);
+        DeadCrewMember dead_member(this->crew[dead]);
         this->dead_crew.push_back(dead_member);
         this->crew.erase(this->crew.begin() + dead);
     }
@@ -742,4 +742,5 @@ void SpaceShip::get_dead_crew_info() {
 int SpaceShip::get_speed() {
     return this->speed;
 }
+
 

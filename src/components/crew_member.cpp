@@ -43,6 +43,7 @@ int CrewMember::weapon_score() {
 void CrewMember::getInfo() {
     output_file << "                Name : " << this->name << endl;
     output_file << "                Age : " << this->age << endl;
+    output_file << endl;
     // this->attributes->getInfo();
 }
 
@@ -62,4 +63,3 @@ string CrewMember::get_designation() {
 int CrewMember::get_age() {
     return this->age;
 }
-

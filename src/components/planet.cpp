@@ -70,3 +70,4 @@ void Planet::conflict(SpaceShip *spaceship) {
     spaceship->combat(this->civilization->get_spaceship());
 }
 
+

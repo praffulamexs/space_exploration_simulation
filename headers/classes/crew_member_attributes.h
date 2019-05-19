@@ -19,8 +19,6 @@ class CrewMemberAttributes: public SpeciesAttributes {
         CrewMemberAttributes(int, int);
 
         void getInfo();
-        // operator+();
-        // operator-();
 
         int captain_score();
         int pilot_score();

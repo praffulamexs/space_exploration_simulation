@@ -4,22 +4,22 @@
 Resource::Resource(int val) {
     if(val ==0){
         /* SPACESHIP */
-        this->food = rand() % 2000 + 2300;
-        this->fuel = rand() % 1000 + 3500;
-        this->gold = rand() % 1000 + 2500;
+        this->food = rand() % 1800 + 3100;
+        this->fuel = rand() % 800 + 6200;
+        this->gold = rand() % 2000 + 3500;
         this->scrap_metal = rand() % 200 + 400;
     } else if(val == 1) {
         /* SPECIES */
-        this->food = rand() % 5000 + 5000;
-        this->fuel = rand() % 5000 + 5000;
-        this->gold = rand() % 5000 + 5000;
-        this->scrap_metal = rand() % 5000 + 5000;
+        this->food = rand() % 50000 + 5000;
+        this->fuel = rand() % 50000 + 5000;
+        this->gold = rand() % 50000 + 5000;
+        this->scrap_metal = rand() % 50000 + 5000;
     } else if(val == 2) {
         /* PLANET */
-        this->food = rand() % 20000 + 15000;
-        this->fuel = rand() % 20000 + 15000;
-        this->gold = rand() % 20000 + 15000;
-        this->scrap_metal = rand() % 20000 + 15000;
+        this->food = rand() % 200000 + 15000;
+        this->fuel = rand() % 200000 + 15000;
+        this->gold = rand() % 200000 + 15000;
+        this->scrap_metal = rand() % 200000 + 15000;
     }
 }
 
@@ -69,3 +69,5 @@ void Resource::getInfo() {
     output_file << "        Gold : " << this->gold << endl;
     output_file << "        Scrap Metal : " << this->scrap_metal << endl;
 }
+
+// Resource::~Resource() {}

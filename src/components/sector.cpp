@@ -10,13 +10,12 @@ Sector::Sector(SpaceShip *traveler){
     this->sector_width = rand() % 80 + 20;
     int random = rand() % 100 + 1;
 
+    day = day + (this->sector_width*traveler->get_speed())/100;
+
+    output_file << "DAY : " << day << endl;
+
     output_file << "    Distance Covered : " << this->sector_width << endl;
 
-    // ltm->tm_mday = ltm->tm_mday + 1;
-    // ltm->tm_hour = ltm->tm_hour + 1;
-    // ltm->tm_min = ltm->tm_min + 2;
-
-    // cout << "ltm" << ltm << endl;
 
     if(traveler->travel(this->sector_width) || traveler->check_if_alive()) {
         this->journey = true;
@@ -45,7 +44,7 @@ Sector::Sector(SpaceShip *traveler){
         /*  Probability of finding an Empty Sector  */
         else if(random > 75 && random <=90) {
             output_file << "        Empty Sector" << endl;
-            this->empty_sector();
+            // do nothing
         }
         /*  Probability of being encountered by an Abandoned Spaceship  */
         else if(random > 90) {
@@ -117,18 +116,12 @@ void Sector::trading_station_encountered(TradingStation *trading_station, SpaceS
     trading_station->trade(spaceship);
 }
 
-void Sector::empty_sector() {
-    // consume fuel and food and do rebuild
-}
-
 void Sector::abandoned_spaceship_encountered(SpaceShip *abandoned_spaceship, SpaceShip *spaceship) {
     spaceship->operator+(abandoned_spaceship);
-}
-
-void Sector::end_report() {
-
 }
 
 bool Sector::journey_ended() {
     return this->journey;
 }
+
+// Sector::~Sector() {}

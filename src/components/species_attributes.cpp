@@ -13,5 +13,3 @@ int SpeciesAttributes::get_diplomacy_score() {
 int SpeciesAttributes::get_trading_score() {
     return this->trading;
 }
-
-
