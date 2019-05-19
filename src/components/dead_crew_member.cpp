@@ -30,5 +30,3 @@ void DeadCrewMember::getInfo() {
 
     output_file << endl;
 }
-
-// DeadCrewMember::~DeadCrewMember() {}

@@ -44,7 +44,6 @@ void CrewMember::getInfo() {
     output_file << "                Name : " << this->name << endl;
     output_file << "                Age : " << this->age << endl;
     output_file << endl;
-    // this->attributes->getInfo();
 }
 
 void CrewMember::change_officer_status(string designation) {

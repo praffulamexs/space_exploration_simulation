@@ -15,21 +15,15 @@ SpaceShip::SpaceShip(bool active) {
 
     if(active) {
         int crew_number = rand() % 20 + (this->crew_capacity - 20);
-        // crew_number = 5; //delete later
         for(int i = 0; i < crew_number; i++) {
             CrewMember crew_member;
-            // cout << endl; // delete later
-            // crew_member.getInfo(); //delete later
             this->crew.push_back(crew_member);
         }
         this->find_officers();
     } else {
         int crew_number = rand() % 20 + 5;
-        // crew_number = 5; //delete later
         for(int i = 0; i < crew_number; i++) {
             CrewMember crew_member;
-            // cout << endl; // delete later
-            // crew_member.getInfo(); //delete later
             this->crew.push_back(crew_member);
         }
     }
@@ -50,21 +44,15 @@ SpaceShip::SpaceShip(bool active, int species_diplomacy, int species_trading) {
 
     if(active) {
         int crew_number = rand() % 20 + (this->crew_capacity - 20);
-        // crew_number = 5; //delete later
         for(int i = 0; i < crew_number; i++) {
             CrewMember crew_member(species_diplomacy, species_trading);
-            // cout << endl; // delete later
-            // crew_member.getInfo(); //delete later
             this->crew.push_back(crew_member);
         }
         this->find_officers();
     } else {
         int crew_number = rand() % 20 + 5;
-        // crew_number = 5; //delete later
         for(int i = 0; i < crew_number; i++) {
             CrewMember crew_member;
-            // cout << endl; // delete later
-            // crew_member.getInfo(); //delete later
             this->crew.push_back(crew_member);
         }
     }
@@ -75,32 +63,10 @@ SpaceShip::SpaceShip(bool active, int species_diplomacy, int species_trading) {
 
 void SpaceShip::find_officers() {
     this->find_captain();
-    // cout << "Captain Details : " << endl;
-    // this->captain.getInfo(); //delete later
-
-    // cout << endl;
-
     this->find_pilot();
-    // cout << "Pilot Details : " << endl;
-    // this->pilot.getInfo(); //delete later
-
-    // cout << endl;
-
     this->find_engineer();
-    // cout << "Engineer Details : " << endl;
-    // this->engineer.getInfo(); //delete later
-
-    // cout << endl;
-
     this->find_mining_officer();
-    // cout << "Mining Officer Details : " << endl;
-    // this->mining_officer.getInfo(); //delete later
-
-    // cout << endl;
-
     this->find_weapon_officer();
-    // cout << "Weapon Officer Details : " << endl;
-    // this->weapon_officer.getInfo(); //delete later
 }
 
 string SpaceShip::getName() {
@@ -109,7 +75,6 @@ string SpaceShip::getName() {
 
 
 void SpaceShip::getInfo() {
-    //  output_file << "    Spaceship : " << i + 1 << " : " << endl;
     output_file << "    Spaceship : " << this->name << endl;
     output_file << "    Fuel Capacity : " << this->fuel_capacity << endl;
     output_file << "    Food Capacity : " << this->food_capacity << endl;
@@ -193,13 +158,6 @@ void SpaceShip::fuel_consume(int amount) {
     delete res;
 }
 
-// void SpaceShip::starved_to_death(int dead) {
-//     for(int i=0; i < dead; i++) {
-//         int death_id = rand() % this->crew.size();
-//         this->crew.erase(this->crew.begin() + death_id);
-//     }
-// }
-
 bool SpaceShip::travel(int distance) {
 
     output_file << "    Travel : " << endl;
@@ -263,6 +221,18 @@ void SpaceShip::combat(SpaceShip *spaceship) {
         int original_health = current_spaceship->spaceship_health;
         original_health = (original_health * 70) / 100;
 
+        if(current_spaceship->crew.size() < 1) {
+            output_file << "                ------- " << current_spaceship->getName() << " have no crew left! -------" << endl;
+            fighting = false;
+            break;
+        }
+
+        if(current_spaceship->spaceship_health < 1) {
+            output_file << "                ------- " << current_spaceship->getName() << " is destroyed! -------" << endl;
+            fighting = false;
+            break;
+        } 
+
         if(*current_health < original_health || current_spaceship->crew.size() < 10) {
             //try to run if health below 30%
             int evasion = current_spaceship->conflict_evasaion();
@@ -272,42 +242,41 @@ void SpaceShip::combat(SpaceShip *spaceship) {
                 break;
             }
         } else {
-            output_file << "                " << current_spaceship->getName() << " launched a missile!" << endl;
-            if((rand() % 100 + 1) <= other_spaceship->combat_maneuvers() && other_spaceship->resources->get_fuel() > 55) {
-                // damage evaded
-                other_spaceship->fuel_consume(rand()%5 + 1); // Fuel gets consumed to dodge attack
-                output_file << "                " << other_spaceship->getName() << " evaded the attack!" << endl;
-            } else {
-                int damage = current_spaceship->offensive_performance() - (current_spaceship->offensive_performance()*other_spaceship->defensive_performance())/100;
-                output_file << "                " << current_spaceship->getName() << " dealt " << damage << " damage to " << other_spaceship->getName() << endl;
-                *other_health = *other_health - damage;
-                other_spaceship->damage_dealt(damage);
-            }
+            try {
+                output_file << "                " << current_spaceship->getName() << " launched a missile!" << endl;
+                if((rand() % 100 + 1) <= other_spaceship->combat_maneuvers() && other_spaceship->resources->get_fuel() > 55) {
+                    // damage evaded
+                    other_spaceship->fuel_consume(rand()%5 + 1); // Fuel gets consumed to dodge attack
+                    output_file << "                " << other_spaceship->getName() << " evaded the attack!" << endl;
+                } else {
+                    int damage = current_spaceship->offensive_performance() - (current_spaceship->offensive_performance()*other_spaceship->defensive_performance())/100;
+                    output_file << "                " << current_spaceship->getName() << " dealt " << damage << " damage to " << other_spaceship->getName() << endl;
+                    *other_health = *other_health - damage;
+                    other_spaceship->damage_dealt(damage);
+                }
 
-            // Changing conditions before next loop
-            if(current_spaceship == this) {
-                current_spaceship = spaceship;
-                other_spaceship = this;
-            } else {
-                current_spaceship = this;
-                other_spaceship = spaceship;
-            }
+                // Changing conditions before next loop
+                if(current_spaceship == this) {
+                    current_spaceship = spaceship;
+                    other_spaceship = this;
+                } else {
+                    current_spaceship = this;
+                    other_spaceship = spaceship;
+                }
 
-            if(current_health == spaceship_health1) {
-                current_health = spaceship_health2;
-                other_health = spaceship_health1;
-            } else {
-                current_health = spaceship_health1;
-                other_health = spaceship_health2;
+                if(current_health == spaceship_health1) {
+                    current_health = spaceship_health2;
+                    other_health = spaceship_health1;
+                } else {
+                    current_health = spaceship_health1;
+                    other_health = spaceship_health2;
+                }
+            } catch (exception e) {
+                fighting = false;
+                break;
             }
         }
     }
-
-    // delete spaceship_health1;
-    // delete spaceship_health2;
-    // delete current_spaceship;
-    // delete other_spaceship;
-    // delete current_health;
 }
 
 void SpaceShip::damage_dealt(int damage) {
@@ -584,14 +553,6 @@ void SpaceShip::find_weapon_officer() {
 }
 
 /*  ACTIVITIES CARRIED OUT BY THE SPACESHIP  */
-/*  ACTIVITIES CARRIED OUT BY THE SPACESHIP  */
-/*  ACTIVITIES CARRIED OUT BY THE SPACESHIP  */
-/*  ACTIVITIES CARRIED OUT BY THE SPACESHIP  */
-/*  ACTIVITIES CARRIED OUT BY THE SPACESHIP  */
-/*  ACTIVITIES CARRIED OUT BY THE SPACESHIP  */
-/*  ACTIVITIES CARRIED OUT BY THE SPACESHIP  */
-/*  ACTIVITIES CARRIED OUT BY THE SPACESHIP  */
-/*  ACTIVITIES CARRIED OUT BY THE SPACESHIP  */
 
 int SpaceShip::diplomacy() {
     return this->captain.captain_score();
@@ -613,7 +574,11 @@ int SpaceShip::combat_maneuvers() {
         for(int i=0; i < this->crew.size(); i++) {
             crew_combat_score += (this->crew[i].pilot_score() + this->crew[i].engineer_score()) / 2;
         }
-        crew_combat_score = crew_combat_score / (this->crew.size());
+        if(this->crew.size() > 0) {
+            crew_combat_score = crew_combat_score / (this->crew.size());
+        } else {
+            crew_combat_score = 0;
+        }
         crew_combat_score = (crew_combat_score + this->crew.size()) / 2;
         // The more number of crew members, the better the score and vice versa.
         combat_score = (crew_combat_score + 2 * officer_score) / 3;
@@ -634,7 +599,11 @@ int SpaceShip::system_recovery() {
         for(int i=0; i < this->crew.size(); i++) {
             crew_engineer_score += this->crew[i].engineer_score();
         }
-        crew_engineer_score = crew_engineer_score/(this->crew.size());
+        if(this->crew.size() > 0) {
+            crew_engineer_score = crew_engineer_score / (this->crew.size());
+        } else {
+            crew_engineer_score = 0;
+        }
         crew_engineer_score = (crew_engineer_score + this->crew.size()) / 2;
         // The more number of crew members, the better the score and vice versa.
         recovery_score = (crew_engineer_score + 2*engineer_score)/3;

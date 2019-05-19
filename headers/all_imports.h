@@ -9,7 +9,6 @@
 
 using namespace std;
 
-extern tm *ltm;
 extern vector<string> crew_first_names;
 extern vector<string> crew_last_names;
 extern vector<string> spaceship_names;

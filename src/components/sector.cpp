@@ -58,7 +58,6 @@ Sector::Sector(SpaceShip *traveler){
 }
 
 void Sector::spaceship_encountered(SpaceShip *spaceship, SpaceShip *spaceship_encountered) {
-    // cout << "Just checking food : " << spaceship->resources->get_food() << endl;
     int diplomacy1 = spaceship->diplomacy();
     int diplomacy2 = spaceship_encountered->diplomacy();
     if(diplomacy1 > 70) {
@@ -124,4 +123,3 @@ bool Sector::journey_ended() {
     return this->journey;
 }
 
-// Sector::~Sector() {}

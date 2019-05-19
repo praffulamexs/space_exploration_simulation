@@ -1,2 +1,1845 @@
 Choosing a spaceship among : 
     Spaceship 1 : 
+        Name of the Species : Dictys
+        Name of the Spaceship : Noah
+
+    Spaceship 2 : 
+        Name of the Species : Ghosts
+        Name of the Spaceship : Zathura
+
+    Spaceship 3 : 
+        Name of the Species : Chiron
+        Name of the Spaceship : Noah
+
+    Spaceship 4 : 
+        Name of the Species : Crocotta
+        Name of the Spaceship : Zathura
+
+    Spaceship 5 : 
+        Name of the Species : Thoon
+        Name of the Spaceship : Hispania
+
+Spaceship chosen : 
+    Species : Crocotta
+    Spaceship : Zathura
+    Fuel Capacity : 7426
+    Food Capacity : 5610
+    Crew Capacity : 39
+    Defensive Performance : 81
+    Offensive Performance : 81
+    Mining Potential : 71
+    Travel Effeciency : 85
+    Spaceship Speed : 78
+    Spaceship Health : 88
+        Captain :
+                Name : Robert Black
+                Age : 71
+
+        Pilot :
+                Name : Chris Uchiha
+                Age : 77
+
+        Engineer :
+                Name : Chris Donald
+                Age : 35
+
+        Mining Officer :
+                Name : Arya Garfield
+                Age : 61
+
+        Weapon Officer :
+                Name : Persie Scott
+                Age : 75
+
+
+The Journey Begins...
+
+========================= Sector Beginning ===========================
+    DAY : 1
+    Sector Number : 1
+DAY : 36
+    Distance Covered : 46
+    Travel : 
+        Food Consumed : 128
+        Fuel Consumed : 273
+        Ship Health : 92
+        Material Consumed : 400
+    Spaceship Health : 92
+    Crew Members Left : 23
+        Spaceship Encountered
+            Captains of both the spaceships are negotiating...
+            Negotiation Successful. Trading...
+            Trading Completed.
+    Resources left at the end of the sector :
+        Food : 4546
+        Fuel : 6726
+        Gold : 4462
+        Scrap Metal : 48
+
+======================== Sector End ===========================
+
+    Sector Number : 2
+DAY : 57
+    Distance Covered : 27
+    Travel : 
+        Food Consumed : 75
+        Fuel Consumed : 160
+        Ship Health : 92
+        Material Consumed : 48
+    Spaceship Health : 92
+    Crew Members Left : 23
+        Spaceship Encountered
+            Captains of both the spaceships are negotiating...
+            Negotiation Successful. Trading...
+                Took 0 fuel for 1 gold.
+            Trading Completed.
+    Resources left at the end of the sector :
+        Food : 4471
+        Fuel : 6566
+        Gold : 4461
+        Scrap Metal : 0
+
+======================== Sector End ===========================
+
+    Sector Number : 3
+DAY : 85
+    Distance Covered : 36
+    Travel : 
+        Food Consumed : 100
+        Fuel Consumed : 214
+        Ship Health : 92
+        Material Consumed : 0
+    Spaceship Health : 92
+    Crew Members Left : 23
+        Spaceship Encountered
+            Captains of both the spaceships are negotiating...
+            Negotiation Successful. Trading...
+                Took 20 fuel for 20 gold.
+            Trading Completed.
+    Resources left at the end of the sector :
+        Food : 4371
+        Fuel : 6372
+        Gold : 4441
+        Scrap Metal : 0
+
+======================== Sector End ===========================
+
+    Sector Number : 4
+DAY : 134
+    Distance Covered : 63
+    Travel : 
+        Food Consumed : 176
+        Fuel Consumed : 374
+        Ship Health : 92
+        Material Consumed : 0
+    Spaceship Health : 92
+    Crew Members Left : 23
+        Spaceship Encountered
+            Captains of both the spaceships are negotiating...
+            Negotiation Unsuccessful. Preparing for combat...
+            COMBAT BEGINS!
+                Zathura launched a missile!
+                Zathura dealt 16 damage to Nostromo
+                    Pilot Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 4
+                    New Pilot Chosen!
+                Name : Rose Black
+                Age : 90
+
+                    1 crew members dead!
+                Nostromo ran away!
+            COMBAT OVER
+    Resources left at the end of the sector :
+        Food : 4195
+        Fuel : 5998
+        Gold : 4441
+        Scrap Metal : 0
+
+======================== Sector End ===========================
+
+    Sector Number : 5
+DAY : 201
+    Distance Covered : 87
+    Travel : 
+        Food Consumed : 243
+        Fuel Consumed : 517
+        Ship Health : 92
+        Material Consumed : 0
+    Spaceship Health : 92
+    Crew Members Left : 23
+        Spaceship Encountered
+            Captains of both the spaceships are negotiating...
+            Negotiation Successful. Trading...
+            Trading Completed.
+    Resources left at the end of the sector :
+        Food : 3952
+        Fuel : 5481
+        Gold : 4441
+        Scrap Metal : 0
+
+======================== Sector End ===========================
+
+    Sector Number : 6
+DAY : 240
+    Distance Covered : 50
+    Travel : 
+        Food Consumed : 140
+        Fuel Consumed : 297
+        Ship Health : 92
+        Material Consumed : 0
+    Spaceship Health : 92
+    Crew Members Left : 23
+        Empty Sector
+    Resources left at the end of the sector :
+        Food : 3812
+        Fuel : 5184
+        Gold : 4441
+        Scrap Metal : 0
+
+======================== Sector End ===========================
+
+    Sector Number : 7
+DAY : 282
+    Distance Covered : 54
+    Travel : 
+        Food Consumed : 151
+        Fuel Consumed : 321
+        Ship Health : 92
+        Material Consumed : 0
+    Spaceship Health : 92
+    Crew Members Left : 23
+        Empty Sector
+    Resources left at the end of the sector :
+        Food : 3661
+        Fuel : 4863
+        Gold : 4441
+        Scrap Metal : 0
+
+======================== Sector End ===========================
+
+    Sector Number : 8
+DAY : 346
+    Distance Covered : 83
+    Travel : 
+        Food Consumed : 232
+        Fuel Consumed : 493
+        Ship Health : 92
+        Material Consumed : 0
+    Spaceship Health : 92
+    Crew Members Left : 23
+        Spaceship Encountered
+            Captains of both the spaceships are negotiating...
+            Negotiation Unsuccessful. Preparing for combat...
+            COMBAT BEGINS!
+                Zathura launched a missile!
+                Zathura dealt 16 damage to Zathura
+                    Weapon Officer Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 8
+                    New Weapon Officer Chosen!
+                Name : Will Scott
+                Age : 89
+
+                    7 crew members dead!
+                Zathura launched a missile!
+                Zathura dealt 16 damage to Zathura
+                    Engineer Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 8
+                    New Engineer Chosen!
+                Name : Sansa Targeryan
+                Age : 40
+
+                    7 crew members dead!
+                Zathura launched a missile!
+                Zathura dealt 16 damage to Zathura
+                    Pilot Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 8
+                    New Pilot Chosen!
+                Name : Arya Uzumaki
+                Age : 75
+
+                    2 crew members dead!
+                Zathura ran away!
+            COMBAT OVER
+    Resources left at the end of the sector :
+        Food : 3429
+        Fuel : 4370
+        Gold : 4441
+        Scrap Metal : 0
+
+======================== Sector End ===========================
+
+    Sector Number : 9
+DAY : 393
+    Distance Covered : 61
+    Travel : 
+        Food Consumed : 122
+        Fuel Consumed : 328
+        Ship Health : 92
+        Material Consumed : 0
+    Spaceship Health : 92
+    Crew Members Left : 15
+        Spaceship Encountered
+            Captains of both the spaceships are negotiating...
+            Negotiation Successful. Trading...
+            Trading Completed.
+    Resources left at the end of the sector :
+        Food : 3307
+        Fuel : 4042
+        Gold : 4441
+        Scrap Metal : 0
+
+======================== Sector End ===========================
+
+    Sector Number : 10
+DAY : 452
+    Distance Covered : 76
+    Travel : 
+        Food Consumed : 152
+        Fuel Consumed : 409
+        Ship Health : 92
+        Material Consumed : 0
+    Spaceship Health : 92
+    Crew Members Left : 15
+        Empty Sector
+    Resources left at the end of the sector :
+        Food : 3155
+        Fuel : 3633
+        Gold : 4441
+        Scrap Metal : 0
+
+======================== Sector End ===========================
+
+    Sector Number : 11
+DAY : 469
+    Distance Covered : 23
+    Travel : 
+        Food Consumed : 46
+        Fuel Consumed : 123
+        Ship Health : 92
+        Material Consumed : 0
+    Spaceship Health : 92
+    Crew Members Left : 15
+        Empty Sector
+    Resources left at the end of the sector :
+        Food : 3109
+        Fuel : 3510
+        Gold : 4441
+        Scrap Metal : 0
+
+======================== Sector End ===========================
+
+    Sector Number : 12
+DAY : 539
+    Distance Covered : 90
+    Travel : 
+        Food Consumed : 180
+        Fuel Consumed : 485
+        Ship Health : 92
+        Material Consumed : 0
+    Spaceship Health : 92
+    Crew Members Left : 15
+        Trading Station Encountered
+            Trading with species - Argus
+                Got 2681 food for 2010 gold.
+                Got 3241 fuel for 2430 gold.
+                Got 1 scrap metal for 0 gold.
+    Resources left at the end of the sector :
+        Food : 5610
+        Fuel : 6266
+        Gold : 1
+        Scrap Metal : 1
+
+======================== Sector End ===========================
+
+    Sector Number : 13
+DAY : 558
+    Distance Covered : 25
+    Travel : 
+        Food Consumed : 50
+        Fuel Consumed : 134
+        Ship Health : 92
+        Material Consumed : 1
+    Spaceship Health : 92
+    Crew Members Left : 15
+        Abandoned Spaceship Encountered
+            Crew Members added : 7
+            Resources added : 
+                Food : 4807
+                Fuel : 6307
+                Gold : 5063
+                Metal : 523
+            Extra Resources removed : 
+                Food : 4757
+                Fuel : 5013
+                Gold : 0
+                Metal : 0
+    Resources left at the end of the sector :
+        Food : 5610
+        Fuel : 7426
+        Gold : 5064
+        Scrap Metal : 523
+
+======================== Sector End ===========================
+
+    Sector Number : 14
+DAY : 623
+    Distance Covered : 84
+    Travel : 
+        Food Consumed : 226
+        Fuel Consumed : 452
+        Ship Health : 97
+        Material Consumed : 523
+    Spaceship Health : 97
+    Crew Members Left : 22
+        Spaceship Encountered
+            Captains of both the spaceships are negotiating...
+            Negotiation Unsuccessful. Preparing for combat...
+            COMBAT BEGINS!
+                Zathura launched a missile!
+                Zathura dealt 24 damage to Elysium
+                    Mining Officer Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 14
+                    New Mining Officer Chosen!
+                Name : Cersie Lannister
+                Age : 53
+
+                    7 crew members dead!
+                Elysium ran away!
+            COMBAT OVER
+    Resources left at the end of the sector :
+        Food : 5384
+        Fuel : 6974
+        Gold : 5064
+        Scrap Metal : 0
+
+======================== Sector End ===========================
+
+    Sector Number : 15
+DAY : 692
+    Distance Covered : 89
+    Travel : 
+        Food Consumed : 240
+        Fuel Consumed : 479
+        Ship Health : 97
+        Material Consumed : 0
+    Spaceship Health : 97
+    Crew Members Left : 22
+        Abandoned Spaceship Encountered
+            Crew Members added : 10
+            Resources added : 
+                Food : 4534
+                Fuel : 6390
+                Gold : 4899
+                Metal : 599
+            Extra Resources removed : 
+                Food : 4068
+                Fuel : 5459
+                Gold : 4891
+                Metal : 0
+    Resources left at the end of the sector :
+        Food : 5610
+        Fuel : 7426
+        Gold : 5072
+        Scrap Metal : 599
+
+======================== Sector End ===========================
+
+    Sector Number : 16
+DAY : 758
+    Distance Covered : 85
+    Travel : 
+        Food Consumed : 314
+        Fuel Consumed : 458
+        Ship Health : 100
+        Material Consumed : 300
+    Spaceship Health : 100
+    Crew Members Left : 32
+        Planet Encountered
+            Negotiation with the species found on planet Garissa to either allow to mine or trade.
+            Agreed for Trade.
+    Resources left at the end of the sector :
+        Food : 5296
+        Fuel : 6968
+        Gold : 5072
+        Scrap Metal : 299
+
+======================== Sector End ===========================
+
+    Sector Number : 17
+DAY : 787
+    Distance Covered : 38
+    Travel : 
+        Food Consumed : 140
+        Fuel Consumed : 204
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 32
+        Planet Encountered
+            Negotiation with the species found on planet Hyperion to either allow to mine or trade.
+            Negotiation Unsuccessful. Species launched a spaceship for battle...
+            COMBAT BEGINS!
+                Zathura launched a missile!
+                Messiah evaded the attack!
+                Messiah launched a missile!
+                Messiah dealt 21 damage to Zathura
+                    Mining Officer Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 17
+                    New Mining Officer Chosen!
+                Name : Rose Lannister
+                Age : 38
+
+                    4 crew members dead!
+                Zathura launched a missile!
+                Zathura dealt 22 damage to Messiah
+                    Mining Officer Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 17
+                    New Mining Officer Chosen!
+                Name : Arya Garfield
+                Age : 69
+
+                    6 crew members dead!
+                Messiah launched a missile!
+                Messiah dealt 21 damage to Zathura
+                    Weapon Officer Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 17
+                    New Weapon Officer Chosen!
+                Name : Jamie Lannister
+                Age : 20
+
+                    6 crew members dead!
+                Zathura ran away!
+            COMBAT OVER!
+    Resources left at the end of the sector :
+        Food : 5156
+        Fuel : 6764
+        Gold : 5072
+        Scrap Metal : 299
+
+======================== Sector End ===========================
+
+    Sector Number : 18
+DAY : 833
+    Distance Covered : 59
+    Travel : 
+        Food Consumed : 147
+        Fuel Consumed : 318
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 20
+        Trading Station Encountered
+            Trading with species - Chiron
+                Got 601 food for 601 gold.
+                Got 980 fuel for 980 gold.
+                Got 1376 scrap metal for 1376 gold.
+    Resources left at the end of the sector :
+        Food : 5610
+        Fuel : 7426
+        Gold : 2115
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 19
+DAY : 877
+    Distance Covered : 57
+    Travel : 
+        Food Consumed : 142
+        Fuel Consumed : 307
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 20
+        Planet Encountered
+            Negotiation with the species found on planet Rupert to either allow to mine or trade.
+            Agreed for Mining.
+            Resources mined : 
+                Food collected : 107
+                Fuel mined : 233
+                Gold mined : 2247
+                Scrap Metal mined : 0
+    Resources left at the end of the sector :
+        Food : 5575
+        Fuel : 7352
+        Gold : 4362
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 20
+DAY : 918
+    Distance Covered : 53
+    Travel : 
+        Food Consumed : 132
+        Fuel Consumed : 285
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 20
+        Trading Station Encountered
+            Trading with species - Clinis
+                Got 359 fuel for 269 gold.
+                Got 0 scrap metal for 0 gold.
+    Resources left at the end of the sector :
+        Food : 5443
+        Fuel : 7426
+        Gold : 4093
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 21
+DAY : 966
+    Distance Covered : 62
+    Travel : 
+        Food Consumed : 155
+        Fuel Consumed : 334
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 20
+        Planet Encountered
+            Negotiation with the species found on planet Neji to either allow to mine or trade.
+            Agreed for Mining.
+            Resources mined : 
+                Food collected : 244
+                Fuel mined : 253
+                Gold mined : 744
+                Scrap Metal mined : 0
+    Resources left at the end of the sector :
+        Food : 5532
+        Fuel : 7345
+        Gold : 4837
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 22
+DAY : 1028
+    Distance Covered : 80
+    Travel : 
+        Food Consumed : 200
+        Fuel Consumed : 431
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 20
+        Abandoned Spaceship Encountered
+            Crew Members added : 9
+            Resources added : 
+                Food : 4059
+                Fuel : 6234
+                Gold : 5034
+                Metal : 425
+            Extra Resources removed : 
+                Food : 3781
+                Fuel : 5722
+                Gold : 4799
+                Metal : 0
+    Resources left at the end of the sector :
+        Food : 5610
+        Fuel : 7426
+        Gold : 5072
+        Scrap Metal : 2100
+
+======================== Sector End ===========================
+
+    Sector Number : 23
+DAY : 1071
+    Distance Covered : 56
+    Travel : 
+        Food Consumed : 190
+        Fuel Consumed : 301
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 29
+        Empty Sector
+    Resources left at the end of the sector :
+        Food : 5420
+        Fuel : 7125
+        Gold : 5072
+        Scrap Metal : 2100
+
+======================== Sector End ===========================
+
+    Sector Number : 24
+DAY : 1095
+    Distance Covered : 32
+    Travel : 
+        Food Consumed : 108
+        Fuel Consumed : 172
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 29
+        Trading Station Encountered
+            Trading with species - Dictys
+                Got 298 food for 372 gold.
+                Got -425 scrap metal for -531 gold.
+    Resources left at the end of the sector :
+        Food : 5610
+        Fuel : 6953
+        Gold : 5231
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 25
+DAY : 1139
+    Distance Covered : 57
+    Travel : 
+        Food Consumed : 193
+        Fuel Consumed : 307
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 29
+        Planet Encountered
+            Negotiation with the species found on planet Hope to either allow to mine or trade.
+            Agreed for Trade.
+                Got 780 fuel for 780 gold.
+                Got 0 scrap metal for 0 gold.
+    Resources left at the end of the sector :
+        Food : 5417
+        Fuel : 7426
+        Gold : 4451
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 26
+DAY : 1211
+    Distance Covered : 93
+    Travel : 
+        Food Consumed : 316
+        Fuel Consumed : 501
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 29
+        Trading Station Encountered
+            Trading with species - Ravens
+                Got 509 food for 509 gold.
+                Got 501 fuel for 501 gold.
+                Got 0 scrap metal for 0 gold.
+    Resources left at the end of the sector :
+        Food : 5610
+        Fuel : 7426
+        Gold : 3441
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 27
+DAY : 1235
+    Distance Covered : 32
+    Travel : 
+        Food Consumed : 108
+        Fuel Consumed : 172
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 29
+        Planet Encountered
+            Negotiation with the species found on planet Jijo to either allow to mine or trade.
+            Agreed for Trade.
+                Got 108 food for 108 gold.
+                Got 172 fuel for 172 gold.
+                Got 0 scrap metal for 0 gold.
+    Resources left at the end of the sector :
+        Food : 5610
+        Fuel : 7426
+        Gold : 3161
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 28
+DAY : 1302
+    Distance Covered : 87
+    Travel : 
+        Food Consumed : 295
+        Fuel Consumed : 468
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 29
+        Trading Station Encountered
+            Trading with species - Panes
+                Got 0 scrap metal for 0 gold.
+    Resources left at the end of the sector :
+        Food : 5315
+        Fuel : 6958
+        Gold : 3161
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 29
+DAY : 1356
+    Distance Covered : 70
+    Travel : 
+        Food Consumed : 238
+        Fuel Consumed : 377
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 29
+        Empty Sector
+    Resources left at the end of the sector :
+        Food : 5077
+        Fuel : 6581
+        Gold : 3161
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 30
+DAY : 1410
+    Distance Covered : 70
+    Travel : 
+        Food Consumed : 238
+        Fuel Consumed : 377
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 29
+        Spaceship Encountered
+            Captains of both the spaceships are negotiating...
+            Negotiation Successful. Trading...
+                Gave 500 metal for 500 gold.
+            Trading Completed.
+    Resources left at the end of the sector :
+        Food : 4839
+        Fuel : 6204
+        Gold : 3661
+        Scrap Metal : 1175
+
+======================== Sector End ===========================
+
+    Sector Number : 31
+DAY : 1450
+    Distance Covered : 52
+    Travel : 
+        Food Consumed : 176
+        Fuel Consumed : 280
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 29
+        Trading Station Encountered
+            Trading with species - Chiron
+                Got 947 food for 710 gold.
+                Got 1502 fuel for 1126 gold.
+    Resources left at the end of the sector :
+        Food : 5610
+        Fuel : 7426
+        Gold : 1825
+        Scrap Metal : 1175
+
+======================== Sector End ===========================
+
+    Sector Number : 32
+DAY : 1475
+    Distance Covered : 33
+    Travel : 
+        Food Consumed : 112
+        Fuel Consumed : 177
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 29
+        Abandoned Spaceship Encountered
+            Crew Members added : 17
+            Resources added : 
+                Food : 4342
+                Fuel : 6841
+                Gold : 3573
+                Metal : 593
+            Extra Resources removed : 
+                Food : 4230
+                Fuel : 6664
+                Gold : 0
+                Metal : 0
+    Resources left at the end of the sector :
+        Food : 5610
+        Fuel : 7426
+        Gold : 5398
+        Scrap Metal : 1768
+
+======================== Sector End ===========================
+
+    Sector Number : 33
+DAY : 1499
+    Distance Covered : 32
+    Travel : 
+        Food Consumed : 140
+        Fuel Consumed : 172
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 39
+        Trading Station Encountered
+            Trading with species - Rhodian
+                Got 140 food for 105 gold.
+                Got -93 scrap metal for -69 gold.
+    Resources left at the end of the sector :
+        Food : 5610
+        Fuel : 7254
+        Gold : 5362
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 34
+DAY : 1570
+    Distance Covered : 92
+    Travel : 
+        Food Consumed : 404
+        Fuel Consumed : 495
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 39
+        Empty Sector
+    Resources left at the end of the sector :
+        Food : 5206
+        Fuel : 6759
+        Gold : 5362
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 35
+DAY : 1594
+    Distance Covered : 32
+    Travel : 
+        Food Consumed : 140
+        Fuel Consumed : 172
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 39
+        Spaceship Encountered
+            Captains of both the spaceships are negotiating...
+            Negotiation Unsuccessful. Preparing for combat...
+            COMBAT BEGINS!
+                Zathura launched a missile!
+                Galactica evaded the attack!
+                Galactica launched a missile!
+                Zathura evaded the attack!
+                Zathura launched a missile!
+                Zathura dealt 21 damage to Galactica
+                    Pilot Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 35
+                    New Pilot Chosen!
+                Name : Jon Snow
+                Age : 21
+
+                    6 crew members dead!
+                Galactica launched a missile!
+                Galactica dealt 20 damage to Zathura
+                    Mining Officer Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 35
+                    New Mining Officer Chosen!
+                Name : Jamie Snow
+                Age : 87
+
+                    5 crew members dead!
+                Zathura launched a missile!
+                Zathura dealt 21 damage to Galactica
+                    Mining Officer Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 35
+                    New Mining Officer Chosen!
+                Name : Robert Scott
+                Age : 43
+
+                    5 crew members dead!
+                Galactica ran away!
+            COMBAT OVER
+    Resources left at the end of the sector :
+        Food : 5066
+        Fuel : 6583
+        Gold : 5362
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 36
+DAY : 1615
+    Distance Covered : 28
+    Travel : 
+        Food Consumed : 106
+        Fuel Consumed : 150
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 33
+        Trading Station Encountered
+            Trading with species - Chiron
+    Resources left at the end of the sector :
+        Food : 4960
+        Fuel : 6433
+        Gold : 5362
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 37
+DAY : 1643
+    Distance Covered : 36
+    Travel : 
+        Food Consumed : 136
+        Fuel Consumed : 194
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 33
+        Spaceship Encountered
+            Captains of both the spaceships are negotiating...
+            Negotiation Unsuccessful. Preparing for combat...
+            COMBAT BEGINS!
+                Zathura launched a missile!
+                Zathura evaded the attack!
+                Zathura launched a missile!
+                Zathura evaded the attack!
+                Zathura launched a missile!
+                Zathura evaded the attack!
+                Zathura launched a missile!
+                Zathura dealt 22 damage to Zathura
+                    Pilot Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 37
+                    New Pilot Chosen!
+                Name : Jon Potter
+                Age : 82
+
+                    7 crew members dead!
+                Zathura launched a missile!
+                Zathura dealt 16 damage to Zathura
+                    Mining Officer Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 37
+                    New Mining Officer Chosen!
+                Name : Bran Black
+                Age : 93
+
+                    5 crew members dead!
+                Zathura launched a missile!
+                Zathura evaded the attack!
+                Zathura launched a missile!
+                Zathura dealt 16 damage to Zathura
+                    Captain Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 37
+                    New Captain Chosen!
+                Name : Chris Uzumaki
+                Age : 36
+
+                    2 crew members dead!
+                Zathura ran away!
+            COMBAT OVER
+    Resources left at the end of the sector :
+        Food : 4824
+        Fuel : 6232
+        Gold : 5362
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 38
+DAY : 1697
+    Distance Covered : 70
+    Travel : 
+        Food Consumed : 210
+        Fuel Consumed : 387
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 25
+        Spaceship Encountered
+            Captains of both the spaceships are negotiating...
+            Negotiation Unsuccessful. Preparing for combat...
+            COMBAT BEGINS!
+                Zathura launched a missile!
+                Zathura dealt 13 damage to Spaceball
+                    Weapon Officer Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 38
+                    New Weapon Officer Chosen!
+                Name : Cersie Potter
+                Age : 84
+
+                    7 crew members dead!
+                Spaceball launched a missile!
+                Spaceball dealt 22 damage to Zathura
+                    Engineer Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 38
+                    New Engineer Chosen!
+                Name : Sansa Uzumaki
+                Age : 75
+
+                    2 crew members dead!
+                Zathura launched a missile!
+                Spaceball evaded the attack!
+                Spaceball launched a missile!
+                Zathura evaded the attack!
+                Zathura launched a missile!
+                Zathura dealt 14 damage to Spaceball
+                    Weapon Officer Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 38
+                    New Weapon Officer Chosen!
+                Name : Bran Uzumaki
+                Age : 63
+
+                    3 crew members dead!
+                Spaceball launched a missile!
+                Spaceball dealt 14 damage to Zathura
+                    Weapon Officer Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 38
+                    New Weapon Officer Chosen!
+                Name : Ned Scott
+                Age : 35
+
+                    3 crew members dead!
+                Zathura ran away!
+            COMBAT OVER
+    Resources left at the end of the sector :
+        Food : 4614
+        Fuel : 5844
+        Gold : 5362
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 39
+DAY : 1756
+    Distance Covered : 76
+    Travel : 
+        Food Consumed : 174
+        Fuel Consumed : 441
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 18
+        Empty Sector
+    Resources left at the end of the sector :
+        Food : 4440
+        Fuel : 5403
+        Gold : 5362
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 40
+DAY : 1796
+    Distance Covered : 52
+    Travel : 
+        Food Consumed : 119
+        Fuel Consumed : 302
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 18
+        Planet Encountered
+            Negotiation with the species found on planet Tanith to either allow to mine or trade.
+            Agreed for Trade.
+                Got 1289 food for 1611 gold.
+                Got 2325 fuel for 2906 gold.
+                Got 0 scrap metal for 0 gold.
+    Resources left at the end of the sector :
+        Food : 5610
+        Fuel : 7426
+        Gold : 845
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 41
+DAY : 1827
+    Distance Covered : 41
+    Travel : 
+        Food Consumed : 94
+        Fuel Consumed : 238
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 18
+        Empty Sector
+    Resources left at the end of the sector :
+        Food : 5516
+        Fuel : 7188
+        Gold : 845
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 42
+DAY : 1890
+    Distance Covered : 81
+    Travel : 
+        Food Consumed : 186
+        Fuel Consumed : 470
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 18
+        Spaceship Encountered
+            Captains of both the spaceships are negotiating...
+            Negotiation Unsuccessful. Preparing for combat...
+            COMBAT BEGINS!
+                Zathura launched a missile!
+                Zathura dealt 16 damage to Nostromo
+                    Engineer Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 42
+                    New Engineer Chosen!
+                Name : Joffery Uchiha
+                Age : 55
+
+                    1 crew members dead!
+                Nostromo launched a missile!
+                Nostromo dealt 20 damage to Zathura
+                    Captain Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 42
+                    New Captain Chosen!
+                Name : Joffery Black
+                Age : 79
+
+                    4 crew members dead!
+                Zathura launched a missile!
+                Zathura dealt 17 damage to Nostromo
+                    Engineer Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 42
+                    New Engineer Chosen!
+                Name : Persie Black
+                Age : 34
+
+                    1 crew members dead!
+                Nostromo ran away!
+            COMBAT OVER
+    Resources left at the end of the sector :
+        Food : 5330
+        Fuel : 6718
+        Gold : 845
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 43
+DAY : 1948
+    Distance Covered : 75
+    Travel : 
+        Food Consumed : 135
+        Fuel Consumed : 435
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 13
+        Planet Encountered
+            Negotiation with the species found on planet Persephone to either allow to mine or trade.
+            Negotiation Unsuccessful. Species launched a spaceship for battle...
+            COMBAT BEGINS!
+                Zathura launched a missile!
+                Zathura dealt 18 damage to Bebop
+                    Engineer Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 43
+                    New Engineer Chosen!
+                Name : Arya Garfield
+                Age : 70
+
+                    1 crew members dead!
+                Bebop launched a missile!
+                Bebop dealt 19 damage to Zathura
+                    Captain Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 43
+                    New Captain Chosen!
+                Name : Persie Senju
+                Age : 66
+
+                    1 crew members dead!
+                Zathura launched a missile!
+                Zathura dealt 18 damage to Bebop
+                    Mining Officer Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 43
+                    New Mining Officer Chosen!
+                Name : Chris Garfield
+                Age : 98
+
+                    6 crew members dead!
+                Bebop ran away!
+            COMBAT OVER!
+    Resources left at the end of the sector :
+        Food : 5195
+        Fuel : 6283
+        Gold : 845
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 44
+DAY : 2009
+    Distance Covered : 79
+    Travel : 
+        Food Consumed : 126
+        Fuel Consumed : 458
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 11
+        Spaceship Encountered
+            Captains of both the spaceships are negotiating...
+            Negotiation Unsuccessful. Preparing for combat...
+            COMBAT BEGINS!
+                Zathura launched a missile!
+                Zathura dealt 13 damage to Zathura
+                    Pilot Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 44
+                    New Pilot Chosen!
+                Name : Dan Garfield
+                Age : 31
+
+                    1 crew members dead!
+                Zathura launched a missile!
+                Zathura dealt 20 damage to Zathura
+                    Mining Officer Dead!
+                        Time Of Death : asdasd
+                        Place of Death : Sector 44
+                    New Mining Officer Chosen!
+                Name : Jim Donald
+                Age : 76
+
+                    1 crew members dead!
+                Zathura ran away!
+            COMBAT OVER
+    Resources left at the end of the sector :
+        Food : 5069
+        Fuel : 5825
+        Gold : 845
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 45
+DAY : 2042
+    Distance Covered : 43
+    Travel : 
+        Food Consumed : 60
+        Fuel Consumed : 249
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 9
+        Empty Sector
+    Resources left at the end of the sector :
+        Food : 5009
+        Fuel : 5576
+        Gold : 845
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 46
+DAY : 2080
+    Distance Covered : 49
+    Travel : 
+        Food Consumed : 68
+        Fuel Consumed : 284
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 9
+        Planet Encountered
+            Negotiation with the species found on planet Galileo to either allow to mine or trade.
+            Agreed for Trade.
+                Got 845 fuel for 845 gold.
+                Got 0 scrap metal for 0 gold.
+    Resources left at the end of the sector :
+        Food : 4941
+        Fuel : 6137
+        Gold : 0
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 47
+DAY : 2122
+    Distance Covered : 55
+    Travel : 
+        Food Consumed : 77
+        Fuel Consumed : 319
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 9
+        Planet Encountered
+            Negotiation with the species found on planet Hope to either allow to mine or trade.
+            Agreed for Mining.
+            Resources mined : 
+                Food collected : 566
+                Fuel mined : 1222
+                Gold mined : 3854
+                Scrap Metal mined : 0
+    Resources left at the end of the sector :
+        Food : 5430
+        Fuel : 7040
+        Gold : 3854
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 48
+DAY : 2161
+    Distance Covered : 51
+    Travel : 
+        Food Consumed : 71
+        Fuel Consumed : 296
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 9
+        Spaceship Encountered
+            Captains of both the spaceships are negotiating...
+            Negotiation Successful. Trading...
+                Gave 500 metal for 500 gold.
+            Trading Completed.
+    Resources left at the end of the sector :
+        Food : 5359
+        Fuel : 6744
+        Gold : 4354
+        Scrap Metal : 1175
+
+======================== Sector End ===========================
+
+    Sector Number : 49
+DAY : 2228
+    Distance Covered : 86
+    Travel : 
+        Food Consumed : 120
+        Fuel Consumed : 499
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 9
+        Trading Station Encountered
+            Trading with species - Diomedes
+                Got 371 food for 278 gold.
+                Got 1181 fuel for 885 gold.
+                Got 500 scrap metal for 375 gold.
+    Resources left at the end of the sector :
+        Food : 5610
+        Fuel : 7426
+        Gold : 2816
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+    Sector Number : 50
+DAY : 2297
+    Distance Covered : 89
+    Travel : 
+        Food Consumed : 124
+        Fuel Consumed : 517
+        Ship Health : 100
+        Material Consumed : 0
+    Spaceship Health : 100
+    Crew Members Left : 9
+        Planet Encountered
+            Negotiation with the species found on planet Xenen to either allow to mine or trade.
+            Agreed for Trade.
+    Resources left at the end of the sector :
+        Food : 5486
+        Fuel : 6909
+        Gold : 2816
+        Scrap Metal : 1675
+
+======================== Sector End ===========================
+
+JOURNEY FINISHED.
+
+Spaceship status :
+    Spaceship : Zathura
+    Fuel Capacity : 7426
+    Food Capacity : 5610
+    Crew Capacity : 39
+    Defensive Performance : 79
+    Offensive Performance : 84
+    Mining Potential : 76
+    Travel Effeciency : 83
+    Spaceship Speed : 78
+    Spaceship Health : 100
+        Food : 5486
+        Fuel : 6909
+        Gold : 2816
+        Scrap Metal : 1675
+    Captain :
+                Name : Persie Senju
+                Age : 66
+
+    Pilot :
+                Name : Jon Potter
+                Age : 82
+
+    Engineer :
+                Name : Sansa Uzumaki
+                Age : 75
+
+    Mining Officer :
+                Name : Jim Donald
+                Age : 76
+
+    Weapon Officer :
+                Name : Ned Scott
+                Age : 35
+
+    Crew Members :
+                Name : Rose Scott
+                Age : 54
+
+                Name : Cersie Senju
+                Age : 83
+
+                Name : Arya Black
+                Age : 54
+
+                Name : Jamie Uzumaki
+                Age : 26
+
+                Name : Joffery Targeryan
+                Age : 91
+
+                Name : Chris Uzumaki
+                Age : 31
+
+                Name : Bran Uchiha
+                Age : 72
+
+                Name : Will Uchiha
+                Age : 90
+
+                Name : Joffery Lannister
+                Age : 68
+
+    Dead Crew Members :
+                Name : Chris Donald
+                Age : 35
+                Role : Engineer
+                Place of Death : Sector 8
+                Day of Death : 346
+
+                Name : Jim Uzumaki
+                Age : 30
+                Role : Crew Member
+                Place of Death : Sector 8
+                Day of Death : 346
+
+                Name : Cersie Donald
+                Age : 91
+                Role : Crew Member
+                Place of Death : Sector 8
+                Day of Death : 346
+
+                Name : Jack Snow
+                Age : 48
+                Role : Crew Member
+                Place of Death : Sector 8
+                Day of Death : 346
+
+                Name : Arya Uzumaki
+                Age : 82
+                Role : Crew Member
+                Place of Death : Sector 8
+                Day of Death : 346
+
+                Name : Ned Jackson
+                Age : 56
+                Role : Crew Member
+                Place of Death : Sector 8
+                Day of Death : 346
+
+                Name : Rose Donald
+                Age : 96
+                Role : Crew Member
+                Place of Death : Sector 8
+                Day of Death : 346
+
+                Name : Jim Black
+                Age : 45
+                Role : Crew Member
+                Place of Death : Sector 8
+                Day of Death : 346
+
+                Name : Arya Garfield
+                Age : 61
+                Role : Mining Officer
+                Place of Death : Sector 17
+                Day of Death : 787
+
+                Name : Jon Donald
+                Age : 21
+                Role : Crew Member
+                Place of Death : Sector 17
+                Day of Death : 787
+
+                Name : Chris Uchiha
+                Age : 46
+                Role : Crew Member
+                Place of Death : Sector 17
+                Day of Death : 787
+
+                Name : Micheal Uchiha
+                Age : 35
+                Role : Crew Member
+                Place of Death : Sector 17
+                Day of Death : 787
+
+                Name : Jack Uchiha
+                Age : 32
+                Role : Crew Member
+                Place of Death : Sector 17
+                Day of Death : 787
+
+                Name : Persie Scott
+                Age : 75
+                Role : Weapon Officer
+                Place of Death : Sector 17
+                Day of Death : 787
+
+                Name : Ned Targeryan
+                Age : 56
+                Role : Crew Member
+                Place of Death : Sector 17
+                Day of Death : 787
+
+                Name : Chris Scott
+                Age : 24
+                Role : Crew Member
+                Place of Death : Sector 17
+                Day of Death : 787
+
+                Name : Persie Potter
+                Age : 65
+                Role : Crew Member
+                Place of Death : Sector 17
+                Day of Death : 787
+
+                Name : Cersie Uzumaki
+                Age : 81
+                Role : Crew Member
+                Place of Death : Sector 17
+                Day of Death : 787
+
+                Name : Jim Targeryan
+                Age : 46
+                Role : Crew Member
+                Place of Death : Sector 17
+                Day of Death : 787
+
+                Name : Ned Uchiha
+                Age : 89
+                Role : Crew Member
+                Place of Death : Sector 17
+                Day of Death : 787
+
+                Name : Rose Lannister
+                Age : 38
+                Role : Mining Officer
+                Place of Death : Sector 35
+                Day of Death : 1594
+
+                Name : Chris Uzumaki
+                Age : 79
+                Role : Crew Member
+                Place of Death : Sector 35
+                Day of Death : 1594
+
+                Name : Jon Scott
+                Age : 95
+                Role : Crew Member
+                Place of Death : Sector 35
+                Day of Death : 1594
+
+                Name : Cersie Targeryan
+                Age : 56
+                Role : Crew Member
+                Place of Death : Sector 35
+                Day of Death : 1594
+
+                Name : Sansa Senju
+                Age : 49
+                Role : Crew Member
+                Place of Death : Sector 35
+                Day of Death : 1594
+
+                Name : Jack Garfield
+                Age : 26
+                Role : Crew Member
+                Place of Death : Sector 35
+                Day of Death : 1594
+
+                Name : Chris Uchiha
+                Age : 77
+                Role : Pilot
+                Place of Death : Sector 37
+                Day of Death : 1643
+
+                Name : Sansa Donald
+                Age : 29
+                Role : Crew Member
+                Place of Death : Sector 37
+                Day of Death : 1643
+
+                Name : Joffery Jackson
+                Age : 52
+                Role : Crew Member
+                Place of Death : Sector 37
+                Day of Death : 1643
+
+                Name : Dan Potter
+                Age : 48
+                Role : Crew Member
+                Place of Death : Sector 37
+                Day of Death : 1643
+
+                Name : Bran Garfield
+                Age : 92
+                Role : Crew Member
+                Place of Death : Sector 37
+                Day of Death : 1643
+
+                Name : Micheal Potter
+                Age : 93
+                Role : Crew Member
+                Place of Death : Sector 37
+                Day of Death : 1643
+
+                Name : Robert Garfield
+                Age : 24
+                Role : Crew Member
+                Place of Death : Sector 37
+                Day of Death : 1643
+
+                Name : Chris Lannister
+                Age : 75
+                Role : Crew Member
+                Place of Death : Sector 37
+                Day of Death : 1643
+
+                Name : Sansa Targeryan
+                Age : 40
+                Role : Engineer
+                Place of Death : Sector 38
+                Day of Death : 1697
+
+                Name : Robert Scott
+                Age : 81
+                Role : Crew Member
+                Place of Death : Sector 38
+                Day of Death : 1697
+
+                Name : Micheal Scott
+                Age : 99
+                Role : Crew Member
+                Place of Death : Sector 38
+                Day of Death : 1697
+
+                Name : Jamie Lannister
+                Age : 20
+                Role : Weapon Officer
+                Place of Death : Sector 38
+                Day of Death : 1697
+
+                Name : Jamie Uchiha
+                Age : 26
+                Role : Crew Member
+                Place of Death : Sector 38
+                Day of Death : 1697
+
+                Name : Jamie Lannister
+                Age : 99
+                Role : Crew Member
+                Place of Death : Sector 38
+                Day of Death : 1697
+
+                Name : Chris Garfield
+                Age : 59
+                Role : Crew Member
+                Place of Death : Sector 38
+                Day of Death : 1697
+
+                Name : Robert Black
+                Age : 71
+                Role : Captain
+                Place of Death : Sector 42
+                Day of Death : 1890
+
+                Name : Arya Uzumaki
+                Age : 51
+                Role : Crew Member
+                Place of Death : Sector 42
+                Day of Death : 1890
+
+                Name : Cersie Senju
+                Age : 44
+                Role : Crew Member
+                Place of Death : Sector 42
+                Day of Death : 1890
+
+                Name : Sansa Black
+                Age : 63
+                Role : Crew Member
+                Place of Death : Sector 42
+                Day of Death : 1890
+
+                Name : Persie Scott
+                Age : 70
+                Role : Crew Member
+                Place of Death : Sector 42
+                Day of Death : 1890
+
+                Name : Joffery Black
+                Age : 79
+                Role : Captain
+                Place of Death : Sector 43
+                Day of Death : 1948
+
+                Name : Dan Black
+                Age : 75
+                Role : Crew Member
+                Place of Death : Sector 43
+                Day of Death : 1948
+
+                Name : Jamie Snow
+                Age : 87
+                Role : Mining Officer
+                Place of Death : Sector 44
+                Day of Death : 2009
+
+                Name : Will Stark
+                Age : 34
+                Role : Crew Member
+                Place of Death : Sector 44
+                Day of Death : 2009
+

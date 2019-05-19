@@ -5,7 +5,6 @@ Species::Species() {
     this->name = species_names[rand() % species_names.size()];
     this->attributes = new SpeciesAttributes();
     this->resources = new Resource(1);
-    // this->spaceship = new SpaceShip(true);
     this->spaceship = new SpaceShip(true, this->attributes->get_diplomacy_score(), this->attributes->get_trading_score());
 }
 

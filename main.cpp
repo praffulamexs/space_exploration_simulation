@@ -3,9 +3,6 @@
 #include "./headers/classes/spaceship.h"
 #include "./headers/classes/species.h"
 
-time_t now = time(0);
-tm *ltm = localtime(&now);
-
 vector<string> crew_first_names;
 vector<string> crew_last_names;
 
@@ -59,7 +56,6 @@ int main(int inputs, char **args) {
             cerr << "Please Enter a number between 1 and 50" << endl;
             return 0;
         }
-        // sector_number = 1;
 
         output_file << "Spaceship chosen : " << endl;
         output_file << "    Species : " << species[random].get_species_name() << endl;
@@ -130,12 +126,10 @@ int main(int inputs, char **args) {
         output_file << "    Crew Members :" << endl;
         species[random].get_spaceship()->get_crew_info();
 
-        //deadcrewmembers
         output_file << "    Dead Crew Members :" << endl;
         species[random].get_spaceship()->get_dead_crew_info();
 
         output_file.close();
-        // delete spaceship;
         return 0;
     }
 }

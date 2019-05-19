@@ -70,4 +70,3 @@ void Resource::getInfo() {
     output_file << "        Scrap Metal : " << this->scrap_metal << endl;
 }
 
-// Resource::~Resource() {}
